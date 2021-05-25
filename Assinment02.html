@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='./Assinment02.js'></script>
+</head>
+<body>
+    
+    <h1>Assinment 02 </h1>
+    
+    <P>Sô tiền vay</P>
+    <input type="text"id="tienvay">
+    <P>Thời gian vay</P>
+    <input type="text"id = "tgianvay">
+    <p>Lãi suất</p>
+    <input type="text"id= "laisuat">
+    <p>Ngày giải ngân</p>
+    <input type="text"id ="lich">
+
+    <button id = "btn">Tính</button>
+
+    <!-- Javascript -->
+    
+    <script>
+        var  goc = 100000000;
+var laiSuat = 0.08/12;         // --> khai báo 
+var thogianVay = 12;
+
+console.log(goc, laiSuat, thogianVay);    // dùng hàm console để gọi khai báo ham
+
+ var gocConLai= goc;      // dùng toán tử gán 
+
+var gocHangThang= goc/thogianVay;
+
+for(var i = 0; i<thogianVay; i++ ){       // dùng cấu trúc vòng lặp for 
+  var laiPhaiTra = gocConLai * laiSuat;
+  var tienPhaiTraHangThang = laiPhaiTra + gocHangThang;
+
+  gocConLai -= gocHangThang;      // sử dụng toán tử gán 
+
+  console.log('Sô gốc còn lại:' + gocConLai.toString() + ' Gốc:' + gocHangThang.toString() + 'Lãi:' + laiPhaiTra.toString() + ' Gốc + Lãi: ' + tienPhaiTraHangThang.toString());  // sử dụng toán tử nối chuỗi, kiểu dữ liệu String 
+}
+    </script>
+</body>
+</html>
