@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Viết chương trình nhập số nguyên dương a và kiểm tra a có phải là số tự đối xứng không?</p>
+    <script>
+        var input = 1234321;
+    var number = input;
+    var numberXD = 0;
+
+    while(number>0){
+        
+        var sc = number%10;
+        numberXD = numberXD *10 + sc;
+        number = Math.floor(number/10);
+    }
+
+    console.log('đầu vào: ' + input)
+    console.log('Số đảo: ' + numberXD)
+
+    if(numberXD === input ) console.log("Là số đối xứng")
+    else{
+        console.log("Không phải là số đối xứng")
+    }
+    </script>
+</body>
+</html>

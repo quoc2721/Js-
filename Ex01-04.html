@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>04 Viết chương trình có sử dụng hàm
+
+        Viết chương trình nhập mảng một chiều A với n phần tử
+        
+        (n>=10).Xuất mảng A ra màn hình:
+        
+        Xuất ra màn hình các hoàn hảo trong A trên</p>
+    <script>
+        var array = [1,2,3,4,5,6,7,10,20,28,26,8128];
+
+
+var tongUoc = function(number){
+    var tong = 0;
+    for(var i = 1;i<number;i++){
+       
+        if(number%i==0) tong+=i;
+    }
+    return tong;
+}
+//tạo hàm kiểm tra
+var checkNumber = function(number,TUoc){
+    if(number===TUoc) return true;
+    return false;
+}
+for(var i of array){
+    if(checkNumber(i,tongUoc(i))){
+        console.log(i+" là số hoàn hảo");
+    }
+}
+    </script>
+    
+</body>
+</html>
